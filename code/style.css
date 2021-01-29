@@ -1,0 +1,246 @@
+/* font-family: subway-berlin-std, sans-serif; 
+font-family: subway-berlin-sc, sans-serif; 
+
+*/
+
+@font-face {
+    font-family: alarmNormal;
+    src: url(./fonts/DS-DIGI.TTF);
+}
+
+@font-face {
+    font-family: alarmBold;
+    src: url(./fonts/DS-DIGIB.TTF);
+}
+
+@font-face {
+    font-family: alarmBlack;
+    src: url(./fonts/DS-DIGIT.TTF);
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #131313;
+    font-size: 30px;
+}
+
+.landingTitle {
+    font-family: subway-berlin-std, sans-serif;
+    font-weight: 200;
+    color: #e6e6e6;
+    font-size: 1rem;
+    margin: auto;
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.lightcontainer {
+    min-width: 1000px;
+    z-index: 2;
+}
+
+#light1,
+#light2,
+#light3,
+#light4 {
+    display: inline;
+    position: absolute;
+    top: 10%;
+    height: 700px;
+    fill-opacity: 0.8
+}
+
+#light1 {
+    left: 0%;
+    transform-origin: top center;
+    transform: rotate(-30deg)
+}
+
+#light2 {
+    left: 5%;
+    transform-origin: top center;
+    transform: rotate(-30deg)
+}
+
+#light3 {
+    right: 5%;
+    transform-origin: top center;
+    transform: rotate(30deg)
+}
+
+#light4 {
+    right: 0%;
+    transform-origin: top center;
+    transform: rotate(30deg)
+}
+
+.contents {
+    z-index: 0;
+    min-width: 1000px;
+    align-content: center;
+}
+
+.contents>.subTitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 0.4rem;
+    color: #e6e6e6;
+    width: 30%;
+    min-width: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.contents>.vinyl {
+    width: 300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    filter: blur(0.5px);
+    opacity: 0.8;
+    transform-origin: center;
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+hr {
+    width: 30px;
+    border-bottom: 5px dotted #e6e6e6;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}
+
+.videocontainer {
+    position: absolute;
+    width: 100%;
+    min-width: 1000px;
+}
+
+.videocontainer>.videodescription {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #e6e6e6;
+    width: 30%;
+    min-width: 300px;
+}
+
+.videocontainer>.videodescription>h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem
+}
+
+.actuallyrics {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(93, 93, 93, 0.603);
+    padding: 20px 20px;
+    margin-top: 25px;
+    height: 400px;
+    overflow-y: scroll;
+    font-size: 0.5rem;
+    opacity: 0.8;
+}
+
+.firstsong {
+    position: absolute;
+    top: 67%;
+    left: 75%;
+    color: #e6e6e6;
+    font-size: 0.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.highText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F74F4F;
+    font-weight: 400;
+    font-size: 0.6rem
+}
+
+.videodescription>.nonhighText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 0.6rem
+}
+
+video {
+    width: 100%;
+    min-width: 1000px;
+    opacity: 0.3;
+    filter: blur(4px)
+}
+
+.graphbox {
+    width: 400px;
+    min-width: 1000px;
+    height: 800px;
+    position: absolute;
+}
+
+.xAxis,
+.yAxisSM,
+.yAxisBG,
+.BGgrid,
+.SMgrid {
+    stroke: #aaaaaa;
+    color: #aaaaaa;
+}
+
+.xAxis {
+    font-size: 14px;
+}
+
+.xAxis>text {
+    color: #ffffff
+}
+
+.xAxis>.domain {
+    stroke-width: 0.3px;
+}
+
+.BGgrid,
+.SMgrid {
+    stroke-width: 0.1px;
+    stroke-dasharray: 5;
+    opacity: 1
+}
+
+.breakline {
+    stroke-width: 2px;
+    opacity: 0.4;
+    stroke-dasharray: 0;
+    /* color: gold; */
+}
+
+.tick>text {
+    font-size: 10px;
+    font-weight: 100;
+    opacity: 0.5
+}
+
+
+/* .breaklinetext {
+    opacity: 1;
+    stroke: #EAF74F;
+} */
+
+.tick>.breaklinetext {
+    opacity: 1;
+    /* stroke: gold; */
+    font-size: 12px;
+}
