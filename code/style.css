@@ -88,7 +88,7 @@ body {
 .contents>.subTitle {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     color: #e6e6e6;
     width: 30%;
     min-width: 300px;
@@ -129,40 +129,52 @@ hr {
     position: absolute;
     width: 100%;
     min-width: 1000px;
+    overflow-y: hidden;
 }
 
-.videocontainer>.videodescription {
+.videodescription {
     position: absolute;
     top: 20%;
     left: 10%;
     color: #e6e6e6;
-    width: 30%;
+    width: 40%;
     min-width: 300px;
+    opacity: 0;
 }
 
-.videocontainer>.videodescription>h1 {
+.videodescription>h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem
 }
 
 .actuallyrics {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(93, 93, 93, 0.603);
-    padding: 20px 20px;
-    margin-top: 25px;
+    background: rgba(93, 93, 93, 0.603);
+    padding: none;
+    padding-top: 30px;
+    margin-top: 55px;
     height: 400px;
     overflow-y: scroll;
     font-size: 0.5rem;
     opacity: 0.8;
+    border-radius: 10px;
+}
+
+.actuallyrics>.lyrics {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    overflow-y: scroll;
 }
 
 .firstsong {
     position: absolute;
-    top: 67%;
-    left: 75%;
+    bottom: 5%;
+    right: 5%;
     color: #e6e6e6;
     font-size: 0.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
 }
 
 .highText {
@@ -175,7 +187,7 @@ hr {
 .videodescription>.nonhighText {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 100;
-    font-size: 0.6rem
+    font-size: 0.6rem;
 }
 
 video {
@@ -185,11 +197,28 @@ video {
     filter: blur(4px)
 }
 
+.videoclip {
+    opacity: 0;
+}
+
 .graphbox {
+    width: 100%;
+    padding-top: 50px;
+    position: absolute;
+    text-align: center
+}
+
+.distribution {
     width: 400px;
     min-width: 1000px;
     height: 800px;
-    position: absolute;
+    opacity: 0;
+}
+
+.distributionTitle {
+    fill: #ffffff;
+    font-size: 0.6em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .xAxis,
@@ -243,4 +272,21 @@ video {
     opacity: 1;
     /* stroke: gold; */
     font-size: 12px;
+}
+
+.button {
+    background: white;
+    width: 250px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.msg1 {
+    position: absolute;
+    width: 300px;
+    /* min-width: 200px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e6e6e6;
+    font-size: 0.6rem;
+    right: 5%;
 }

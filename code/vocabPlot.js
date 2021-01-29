@@ -8,7 +8,7 @@ export const vocabPlot = async() => {
 
     await drawAxis();
     plotCircle()
-    setTimeout(() => { leavingQuarter() }, 3500)
+    d3.select('.button').on('click', leavingQuarter)
 
 
 
@@ -18,11 +18,12 @@ export const vocabPlot = async() => {
 async function drawAxis() {
 
     data = await d3.json('./data/data.json')
-    width = parseInt($('.graphbox').css('width').split('px')[0])
-    height = parseInt($('.graphbox').css('height').split('px')[0]);
+    width = parseInt($('.distribution').css('width').split('px')[0])
+    height = parseInt($('.distribution').css('height').split('px')[0]);
     svg = d3.select('.distribution')
     svg.attr('width', width);
-    svg.attr('height', height)
+    svg.attr('height', height);
+
 
     marginbase = d3.min([width, height])
 
@@ -44,6 +45,11 @@ async function drawAxis() {
         left: marginbase * 0.2,
         right: marginbase * 0.2
     }
+
+    svg.append('text').classed('distributionTitle', true)
+        .text('Number of Unique* Words')
+        .attr('x', width * 1 / 2 - margin.right)
+        .attr('y', margin.top * 1 / 2)
 
     xscale = d3.scaleLinear()
         .domain([1979, 2022])
@@ -201,7 +207,8 @@ function leavingQuarter() {
 
             if (d3.select(this).data()[0].wordcount < twenty || d3.select(this).data()[0].wordcount > eighty) {
 
-                d3.select(this).transition().duration(1000).style('fill', '#4B4B4B').style('opacity', 0.15)
+                d3.select(this).transition().duration(1000)
+                    .style('fill', '#4B4B4B').style('opacity', 0.15)
             } else {
                 d3.select(this).transition().duration(1000).style('opacity', 0.4).style('fill', '#4FF75C')
                     .transition().duration(1000).attr('r', 3).on('end', addGlow())

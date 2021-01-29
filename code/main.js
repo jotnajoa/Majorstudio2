@@ -1,5 +1,5 @@
 import * as vocabPlot from './vocabPlot.js'
-
+import * as scroll from './scrollcontrol.js'
 var tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.1 })
 
 tl.fromTo('#light1', {
@@ -50,8 +50,14 @@ window.pageSize = 800;
 
 $('.vinyl').css('top', `${pageSize/3}px`)
 $('.subTitle').css('top', `${pageSize*1/5}px`)
-$('.graphbox').css('top', `${pageSize*2}px`)
 
-$('.videocontainer').css('top', `${pageSize}px`)
+
+$('.videocontainer').css('top', `${pageSize*1.5}px`)
+$('.videocontainer').css('height', `${pageSize}px`)
+$('.videodescription').css('top', `${pageSize*2.2}px`)
+
+$('.graphbox').css('top', `${pageSize*4}px`)
+$('.msg1').css('top', `${pageSize*6}px`)
 
 vocabPlot.vocabPlot()
+scroll.scrollcontroll()
