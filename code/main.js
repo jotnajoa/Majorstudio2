@@ -47,17 +47,21 @@ tl.fromTo('#light4', {
 )
 
 window.pageSize = 800;
-
+$('.contents').css('height', `${pageSize*20}px`)
 $('.vinyl').css('top', `${pageSize/3}px`)
 $('.subTitle').css('top', `${pageSize*1/5}px`)
 
 
 $('.videocontainer').css('top', `${pageSize*1.5}px`)
 $('.videocontainer').css('height', `${pageSize}px`)
-$('.videodescription').css('top', `${pageSize*2.2}px`)
+$('.videodescription').css('top', `${pageSize*1.6}px`)
 
-$('.graphbox').css('top', `${pageSize*4}px`)
+$('.graphbox').css('top', `${pageSize*4}px`);
+$('.graphbox').css('height', `${pageSize*1}px`);
 $('.msg1').css('top', `${pageSize*6}px`)
+$('.msg2').css('top', `${pageSize*7}px`)
 
+$('.methodology').css('top', `${pageSize*9}px`)
+$('.methodology').css('height', `${pageSize*1}px`);
 vocabPlot.vocabPlot()
 scroll.scrollcontroll()

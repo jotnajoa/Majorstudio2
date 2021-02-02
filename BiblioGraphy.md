@@ -52,6 +52,11 @@ Vito, Christopher
 London, England: SAGE Publications
 International journal of cultural studies, 2015-07, Vol.18 (4), p.395-411
 
+3.Easy listening? An analysis of infidelity in top pop, hip-hop, and country song lyrics over 25 years
+Cassandra Alexopoulos1 and Laramie D. Taylor2
+
+4.Drug term trends in American hip-hop lyrics
+Becky Inkster and Akeem Sule
 
 
 

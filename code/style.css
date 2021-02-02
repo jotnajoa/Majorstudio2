@@ -205,7 +205,6 @@ video {
     width: 100%;
     padding-top: 50px;
     position: absolute;
-    text-align: center
 }
 
 .distribution {
@@ -289,4 +288,26 @@ video {
     color: #e6e6e6;
     font-size: 0.6rem;
     right: 5%;
+}
+
+.msg2 {
+    position: absolute;
+    width: 300px;
+    /* min-width: 200px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e6e6e6;
+    font-size: 0.6rem;
+    right: 5%;
+}
+
+.methodology {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #e6e6e6;
+    font-size: 1rem;
+    position: absolute;
+    opacity: 0;
+}
+
+.methodTitle {
+    position: fixed;
 }

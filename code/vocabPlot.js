@@ -7,8 +7,8 @@ export const vocabPlot = async() => {
 
 
     await drawAxis();
-    plotCircle()
-    d3.select('.button').on('click', leavingQuarter)
+    // plotCircle()
+
 
 
 
@@ -123,7 +123,8 @@ async function drawAxis() {
 
 }
 
-function plotCircle() {
+export const plotCircle = () => {
+    svg.selectAll('circle').remove()
     let circles = svg.append('g').selectAll('circles')
         .data(data)
         .join('circle')
@@ -172,7 +173,7 @@ function make_y_gridlines(yscale, num) {
 
 
 
-function leavingQuarter() {
+export const leavingQuarter = () => {
 
 
     let years = d3.range(1980, 2022, 1);

@@ -1,3 +1,5 @@
+import * as vocabPlot from './vocabPlot.js'
+
 export const scrollcontroll = () => {
 
     let tl1 = gsap.timeline();
@@ -31,8 +33,7 @@ export const scrollcontroll = () => {
             trigger: '.videocontainer',
             scrub: true,
             start: 'center center',
-            pin: '.videodescription',
-            start: 'center top'
+            pin: '.videodescription'
         },
         opacity: 1,
     })
@@ -42,21 +43,43 @@ export const scrollcontroll = () => {
             trigger: '.graphbox',
             scrub: true,
             start: 'center center',
-            end: 'center top',
-            markers: true,
+            end: `+=${pageSize*3}px top`,
             pin: '.distribution',
             onEnter: () => {
-                // $('.distribution').css('position', 'fixed')
-                $('.distribution').animate({ left: '0px', top: '50px' }, 2000)
-
+                $('.distribution').animate({ opacity: 1 }, 1000, () => {
+                    setTimeout(() => { vocabPlot.plotCircle() }, 500)
+                })
             },
             onLeave: () => {
-                $('.distribution').css('position', 'fixed')
+
+
             }
-        },
-        opacity: 1
+        }
     })
 
+    tl1.to('.msg2', {
+        scrollTrigger: {
+            trigger: '.msg2',
+            scrub: true,
+            start: 'center center',
+            pin: '.msg2',
+            onEnter: () => {
+                vocabPlot.leavingQuarter()
+            },
+            onLeave: () => {
 
+            }
+        }
+    })
+
+    tl1.to('.methodology', {
+        scrollTrigger: {
+            trigger: '.methodology',
+            scrub: true,
+            start: 'center center',
+            pin: '.videodescription'
+        },
+        opacity: 1,
+    })
 
 }
