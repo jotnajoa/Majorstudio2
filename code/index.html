@@ -11,11 +11,14 @@
 <link rel="stylesheet" href="https://use.typekit.net/cdm7cmf.css">
 <link rel="stylesheet" href="style.css">
 
+
 <body>
     <div class="landingTitle">Words you need to know to understand Hip Hop Songs</div>
-
+    <div class="headerBox"></div>
     <div class="contents">
-
+        <div class="pjtHeader">
+            How many vocabularies you need to know to understand hiphop songs
+        </div>
         <div class="subTitle">
             <hr> How much of vocabulary do you need to know to enjoy hip hop songs as foreigner. See the lyrics from 80's up to 2020 to figure out the use of English words in hip hop songs and get the minimum amount of words you need to know already.
         </div>
@@ -78,21 +81,106 @@
 
 
         <div class='graphbox'>
+            <div class="graphtitle">
+                <p style='margin:0;padding:0;display:inline-block'>Number of Unique*words</p>
+            </div>
+
+
 
             <svg class="distribution">
                 
             </svg>
+
+
+            <div class="methodology">
+                <p class='methodTitle'>How Unique* words set was made</p>
+                <div class="makinguniques">
+
+                </div>
+                <div class="wordcount">
+                    <p>Word Count: <span class='totalcount'></span></p>
+                </div>
+                <div class="uniqueexample">
+                    <p>Sample Song:Straight Outta Compton - N.W.A</p>
+                </div>
+            </div>
         </div>
 
-        <div class="msg1">
-            Over ths last 40 years, raps have used maximum 2,400 unique words and minimum 3 unique words in a song.
+        <div class="msg msg1">
+            <p>Over ths last 40 years, raps have used maximum 2,400 unique words and minimum 3 unique words in a song.</p>
         </div>
-        <div class="msg2">
-            Taking top 20% and bottom 20% out shows a general trend of word use in hip hop songs.
+        <div class="msg msg2">
+            <p>Taking top 20% and bottom 20% out shows a general trend of word use in hip hop songs.</p>
         </div>
-        <div class="methodology">
-            <p class='methodTitle'>How Unique* words set was made</p>
+
+        <div class="msg msg3">
+            <p>Out of entire lyrics from a song, remove any duplicates of words used more than twice</p>
         </div>
+
+        <div class="msg msg4">
+            <p>After leaving the word duplicates, what's left are counted as Unique-word*</p>
+        </div>
+
+        <div class="equalizer">
+
+            <div class="equalizerheader">
+                <div class="headermsg">
+                    Top 100 vocabulary of <span class='targetDecade'>80'</span>s
+                </div>
+                <div class="headerdescription">
+                    After getting all lyrics from the representing songs of the decade, the frequency of each word is presented as below. Out of the hundred most used words, each ten vocabulary is group into ten sub groups and the frequency of each word is scaled within
+                    its group.
+                </div>
+                <div class="artistImgs">
+
+                </div>
+
+            </div>
+
+            <svg class="equalizergraph">
+
+            </svg>
+
+        </div>
+        <div class="decadeselection">
+
+            <div class="buttonheader">
+                <div class="headermsg">
+                    Click a decade to see the vocabulary used
+                </div>
+            </div>
+
+            <div class="buttoncontainer">
+
+                <div class="button eighty">
+                    <img src="./imgs/80sVinyl.png" alt="" class="lp lp80s">
+                    <img src="./imgs/80cover.png" alt="" class="pic eighty">
+                    <p class="eraDesc eighty">80's</p>
+                </div>
+                <div class="button ninety">
+                    <img src="./imgs/90sVinyl.png" alt="" class="lp lp90s">
+                    <img src="./imgs/90cover.png" alt="" class="pic ninety">
+                    <p class="eraDesc ninety">90's</p>
+                </div>
+                <div class="button zero">
+                    <img src="./imgs/00sVinyl.png" alt="" class="lp lp00s">
+                    <img src="./imgs/00cover.png" alt="" class="pic zero">
+                    <p class="eraDesc zero">00's</p>
+                </div>
+                <div class="button ten">
+                    <img src="./imgs/10sVinyl.png" alt="" class="lp lp10s">
+                    <img src="./imgs/10cover.png" alt="" class="pic ten">
+                    <p class="eraDesc ten">10's</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
     </div>
 
     <div class="lightcontainer">
@@ -100,6 +188,63 @@
         <img id='light2' src="./imgs/light2.png" alt="">
         <img id='light3' src="./imgs/light3.png" alt="">
         <img id='light4' src="./imgs/light4.png" alt="">
+    </div>
+    <div class="player">
+        <div class="playing">
+            <div class="status">NOW PLAYING</div>
+            <div class="playingobj">
+                HIP HOP VOCABULARY
+            </div>
+        </div>
+
+        <div class="controllbuttons">
+
+            <div class="iconname">REWIND</div>
+
+            <svg class="rewindbutton iconcontainer">
+                <path class='rewind icon'd="M0,15 l15,-15 l0,30 Z"
+                style="stroke: none;"/>
+                <path class='rewind icon'd="M20,15 l15,-15 l0,30 Z"
+                style="stroke: none;"/>
+            </svg>
+
+        </div>
+
+        <div class="controllbuttons">
+
+            <div class="iconname">PLAY/PAUSE</div>
+
+            <svg class="playpausebutton iconcontainer">
+                <path class='play icon'd="M0,0 l15,15 l-15,15 Z"
+                style="stroke: none;"/>
+                <rect class='pause icon' width='3' height='30' x='25'>
+                </rect>
+                <rect class='pause icon' width='3' height='30' x='30'>
+                </rect>
+            </svg>
+
+        </div>
+
+        <div class="controllbuttons">
+
+            <div class="iconname">EJECT</div>
+
+            <svg class="ejectbutton iconcontainer">
+                <path class='eject icon'd="M20,0 l20,20 l-40,0 Z"
+                style="stroke: none;"/>
+                <rect class='eject icon'width='40' height=5 y=25>
+
+                </rect>
+
+            </svg>
+
+        </div>
+
+        <div class="crossbar">
+
+        </div>
+
+    </div>
     </div>
 
 </body>

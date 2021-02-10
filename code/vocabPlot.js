@@ -21,8 +21,6 @@ async function drawAxis() {
     width = parseInt($('.distribution').css('width').split('px')[0])
     height = parseInt($('.distribution').css('height').split('px')[0]);
     svg = d3.select('.distribution')
-    svg.attr('width', width);
-    svg.attr('height', height);
 
 
     marginbase = d3.min([width, height])
@@ -45,11 +43,11 @@ async function drawAxis() {
         left: marginbase * 0.2,
         right: marginbase * 0.2
     }
+    graphmargin = margin;
 
-    svg.append('text').classed('distributionTitle', true)
-        .text('Number of Unique* Words')
-        .attr('x', width * 1 / 2 - margin.right)
-        .attr('y', margin.top * 1 / 2)
+
+
+    $('.graphtitle').css('top', `${margin.top/3}px`)
 
     xscale = d3.scaleLinear()
         .domain([1979, 2022])
@@ -124,6 +122,9 @@ async function drawAxis() {
 }
 
 export const plotCircle = () => {
+    d3.select('.yAxisBG').transition().duration(1000).style('opacity', 1)
+    d3.select('.BGgrid').transition().duration(1000).style('opacity', 1)
+
     svg.selectAll('circle').remove()
     let circles = svg.append('g').selectAll('circles')
         .data(data)

@@ -3,6 +3,13 @@ font-family: subway-berlin-sc, sans-serif;
 
 */
 
+
+/*
+font-family: realist, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
 @font-face {
     font-family: alarmNormal;
     src: url(./fonts/DS-DIGI.TTF);
@@ -22,6 +29,7 @@ html,
 body {
     margin: 0;
     height: 100%;
+    width: 100%;
     background-color: #131313;
     font-size: 30px;
 }
@@ -40,8 +48,32 @@ body {
 }
 
 .lightcontainer {
-    min-width: 1000px;
+    width: 1000px;
     z-index: 2;
+}
+
+.pjtHeader {
+    font-family: subway-berlin-std, sans-serif;
+    position: fixed;
+    opacity: 1;
+    top: 1%;
+    width: 70%;
+    min-width: 1000px;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #ffffff;
+    opacity: 0;
+    z-index: 3
+}
+
+.headerBox {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.26);
+    height: 4%;
+    top: 0%;
+    position: fixed;
+    opacity: 0;
+    z-index: 3
 }
 
 #light1,
@@ -82,7 +114,10 @@ body {
 .contents {
     z-index: 0;
     min-width: 1000px;
+    width: 70%;
     align-content: center;
+    margin: auto;
+    position: relative;
 }
 
 .contents>.subTitle {
@@ -99,20 +134,40 @@ body {
 .contents>.vinyl {
     width: 300px;
     display: block;
-    margin: auto;
-    position: relative;
+    position: fixed;
     filter: blur(0.5px);
     opacity: 0.8;
     transform-origin: center;
     animation: rotation 2s infinite linear;
+    perspective: 450px;
 }
 
 @keyframes rotation {
     from {
-        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes recordTransition {
+    from {
+        transform: rotate3d(1, 0, 0, 0deg)
+    }
+    to {
+        transform: rotate3d(1, 0, 0, 75deg)
+    }
+}
+
+@keyframes turntable {
+    from {
+        left: 50%;
+        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(0deg);
+    }
+    to {
+        left: 50%;
+        transform: translate(-50%, 0) rotate3d(1, 0, 0, 75deg) rotate(360deg);
     }
 }
 
@@ -152,12 +207,13 @@ hr {
     background: rgba(93, 93, 93, 0.603);
     padding: none;
     padding-top: 30px;
-    margin-top: 55px;
-    height: 400px;
+    margin-top: 15px;
+    height: 350px;
     overflow-y: scroll;
     font-size: 0.5rem;
     opacity: 0.8;
-    border-radius: 10px;
+    border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .actuallyrics>.lyrics {
@@ -169,8 +225,8 @@ hr {
 
 .firstsong {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
+    bottom: 2%;
+    right: 0%;
     color: #e6e6e6;
     font-size: 0.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -199,6 +255,9 @@ video {
 
 .videoclip {
     opacity: 0;
+    width: 1500px;
+    position: absolute;
+    left: -20%;
 }
 
 .graphbox {
@@ -208,16 +267,39 @@ video {
 }
 
 .distribution {
-    width: 400px;
-    min-width: 1000px;
-    height: 800px;
+    width: 70%;
+    min-width: 600px;
+    height: 500px;
     opacity: 0;
 }
 
 .distributionTitle {
+    color: #ffffff;
     fill: #ffffff;
     font-size: 0.6em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.graphtitle {
+    color: #ffffffc5;
+    font-size: 0.4em;
+    font-style: oblique;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left: 10%;
+    top: 75%;
+    opacity: 0;
+}
+
+.wordcount {
+    font-size: 0.6rem;
+    color: #F74F4F;
+}
+
+.wordCount,
+p {
+    padding: 0;
+    margin: 10px;
 }
 
 .xAxis,
@@ -261,53 +343,323 @@ video {
     opacity: 0.5
 }
 
-
-/* .breaklinetext {
-    opacity: 1;
-    stroke: #EAF74F;
-} */
-
 .tick>.breaklinetext {
     opacity: 1;
     /* stroke: gold; */
     font-size: 12px;
 }
 
+.decadeselection {
+    opacity: 0;
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.decadeselection>.buttonheader {
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.equalizer {
+    opacity: 0;
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.equalizer>.equalizerheader {
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+}
+
+.equalizerheader>.headermsg {
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-style: oblique
+}
+
+.equalizerheader>.headerdescription {
+    width: 40%;
+    margin: auto;
+    justify-content: start;
+    font-size: 0.4rem;
+}
+
+.equalizer>.equalizergraph {
+    width: 100%;
+    min-width: 1000px;
+    height: 450px;
+    position: relative;
+    top: 0%;
+}
+
+.eqXaxisText {
+    fill: #4FF75C;
+    font-size: 0.4rem;
+    text-anchor: middle;
+    font-family: alarmNormal;
+    opacity: 0.8
+}
+
+.eqYaxisText {
+    fill: #4FF75C;
+    font-size: 0.4rem;
+    font-family: alarmNormal;
+    opacity: 0.8;
+    text-anchor: end;
+}
+
+.eqRect {
+    opacity: 0.8;
+    stroke: none;
+}
+
+.buttoncontainer {
+    display: grid;
+    grid-auto-flow: column;
+    width: 1000px;
+    margin-top: 15%;
+}
+
 .button {
-    background: white;
-    width: 250px;
-    font-size: 25px;
+    width: 200px;
+    height: 320px;
+    font-size: 0.8rem;
     cursor: pointer;
+    position: relative;
+    opacity: 0.4
 }
 
-.msg1 {
-    position: absolute;
-    width: 300px;
-    /* min-width: 200px; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #e6e6e6;
-    font-size: 0.6rem;
-    right: 5%;
+.button:hover {
+    font-size: 1rem;
+    opacity: 1;
 }
 
-.msg2 {
+.pic {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.pic:hover {
+    box-shadow: 2px 2px 1px #EAF74F
+}
+
+.lp {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.eraDesc {
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+    font-family: subway-berlin-std, sans-serif;
+    bottom: 5%;
+    text-align: center;
+}
+
+.msg {
     position: absolute;
     width: 300px;
-    /* min-width: 200px; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #e6e6e6;
-    font-size: 0.6rem;
+    color: #131313;
+    font-size: 0.5rem;
     right: 5%;
+    background-color: #e6e6e6;
+    box-shadow: 2px 2px 2px #F74F4F;
+    height: 150px;
+}
+
+.msg p {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .methodology {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #e6e6e6;
-    font-size: 1rem;
-    position: absolute;
+    font-size: 0.4rem;
     opacity: 0;
+    position: fixed;
+    width: 60%;
+    min-width: 500px;
 }
 
 .methodTitle {
+    font-size: 0.8rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.makinguniques {
+    color: #e6e6e6;
+    width: 50%;
+    min-width: 200px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.words {
+    opacity: 0.6;
+    color: #e6e6e6;
+    font-size: 0.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.unique {
+    opacity: 1;
+    color: rgb(251, 255, 0);
+    animation: litup 6s
+}
+
+.fadeaway {
+    opacity: 0.1;
+}
+
+@keyframes litup {
+    from {
+        color: #e6e6e6;
+    }
+    to {
+        color: rgb(251, 255, 0);
+    }
+}
+
+.uniqueTitle {
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+.uniqueexample {
+    color: #e6e6e6;
+    position: absolute;
+    text-align: start;
+    font-style: italic;
+    width: 200px
+}
+
+.noclick {}
+
+.equalizerheader {
+    position: relative;
+    top: 5%;
+}
+
+.artistImgs {
+    width: 180%;
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-auto-flow: column;
+    position: absolute;
+    left: -35%;
+    top: 100px;
+    gap: 5px;
+}
+
+.notableArtists {
+    width: 100%;
+    filter: blur(1px);
+    opacity: 0.2;
+}
+
+.player {
     position: fixed;
+    bottom: 2%;
+    color: #ffffff;
+    width: 70%;
+    min-width: 1000px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    font-size: 0.4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: realist, sans-serif;
+    font-size: 0.4rem;
+    opacity: 0
+}
+
+.icon {
+    fill: #F74F4F
+}
+
+.controllbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.status {
+    width: 100%;
+    text-align: start
+}
+
+.iconname {
+    width: 100%;
+    text-align: center;
+    opacity: 0.1
+}
+
+.playingobj {
+    font-family: alarmNormal;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    opacity: 0.7;
+    background-color: #194e1d81;
+    padding: 5px 5px;
+    width: 300px;
+    animation: blinker infinite 1s
+}
+
+.iconcontainer {
+    margin-top: 10px;
+    display: block;
+    width: 30%;
+    opacity: 0.1
+}
+
+.eject {
+    fill: #ffffff;
+}
+
+.crossbar {
+    position: fixed;
+    width: 100%;
+    height: 2px;
+    background-color: #4FF75C;
+    bottom: 60%;
+    opacity: 0.7;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.3;
+    }
 }
