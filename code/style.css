@@ -30,7 +30,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: #131313;
+    background-color: #080611;
     font-size: 30px;
 }
 
@@ -112,12 +112,27 @@ body {
 }
 
 .contents {
-    z-index: 0;
+    z-index: 1;
     min-width: 1000px;
     width: 70%;
     align-content: center;
     margin: auto;
     position: relative;
+}
+
+.backgroundIMG {
+    position: fixed;
+    min-width: 1000px;
+    width: 100%;
+    opacity: 0.1;
+    filter: blur(1px);
+    top: 5%;
+    text-align: center;
+    z-index: 0;
+}
+
+.backgroundSource {
+    width: 700px;
 }
 
 .contents>.subTitle {
@@ -477,15 +492,18 @@ p {
 }
 
 .msg {
+    display: grid;
+    align-items: center;
+    font-family: realist;
     position: absolute;
     width: 300px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #131313;
-    font-size: 0.5rem;
-    right: 5%;
-    background-color: #e6e6e6;
-    box-shadow: 2px 2px 2px #F74F4F;
+    color: #ffffff;
+    font-size: 0.45rem;
+    right: 1%;
+    box-shadow: 2px 2px 4px #ffffff;
     height: 150px;
+    background-color: #414141;
 }
 
 .msg p {
@@ -624,7 +642,7 @@ p {
 .iconname {
     width: 100%;
     text-align: center;
-    opacity: 0.1
+    opacity: 0.8
 }
 
 .playingobj {
@@ -642,7 +660,7 @@ p {
     margin-top: 10px;
     display: block;
     width: 30%;
-    opacity: 0.1
+    opacity: 0.8
 }
 
 .eject {

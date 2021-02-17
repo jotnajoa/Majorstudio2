@@ -2,6 +2,7 @@ import * as vocabPlot from './vocabPlot.js'
 import * as scroll from './scrollcontrol.js'
 import * as uniquewords from './uniqueword.js';
 
+
 var tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.1 })
 
 
@@ -95,7 +96,7 @@ let uniqueWidth = $('.makinguniques').width()
 
 $('.methodology').css('top', `${pageSize*0.1}px`).css('left', `${pageSize*0.3}px`)
 $('.makinguniques').css('top', `${pageSize*0.1}px`).css('left', `0px`)
-$('.uniqueexample').css('top', `${500}px`).css('left', `90%`)
+$('.uniqueexample').css('top', `${window.innerHeight*0.7}px`).css('left', `90%`)
 let boxposition = $('.makinguniques').position()
 console.log(boxposition);
 $('.methodTitle').css({
