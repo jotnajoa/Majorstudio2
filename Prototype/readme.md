@@ -13,3 +13,11 @@ The main three things thinking of this project to be delivered are
 ** Vocabulary usage trend overtime
 
 ** The dispersion pattern of the vocabulary of the lyrics each decade
+
+<img src ='./1png'></img>
+<img src ='./2png'></img>
+<img src ='./3png'></img>
+<img src ='./4png'></img>
+<img src ='./5png'></img>
+<img src ='./6png'></img>
+<img src ='./7png'></img>
