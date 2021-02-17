@@ -14,10 +14,10 @@ The main three things thinking of this project to be delivered are
 
 ** The dispersion pattern of the vocabulary of the lyrics each decade
 
-<img src ='./1png'></img>
-<img src ='./2png'></img>
-<img src ='./3png'></img>
-<img src ='./4png'></img>
-<img src ='./5png'></img>
-<img src ='./6png'></img>
-<img src ='./7png'></img>
+<img src ='./1.png'></img>
+<img src ='./2.png'></img>
+<img src ='./3.png'></img>
+<img src ='./4.png'></img>
+<img src ='./5.png'></img>
+<img src ='./6.png'></img>
+<img src ='./7.png'></img>
