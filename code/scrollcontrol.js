@@ -216,7 +216,6 @@ export const scrollcontroll = () => {
             trigger: '.lastsummary',
             start: `top top`,
             pin: '.lastsummary',
-            markers: true,
             onEnter: () => {
 
                 $('.player').css({
