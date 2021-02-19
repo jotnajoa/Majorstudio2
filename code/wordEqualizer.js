@@ -4,6 +4,7 @@ let width, height, svg, marginbase, margin, xscale, yscale, colorscale, eqData, 
 let numOfStep = 15;
 let colorStep = 4;
 let playTl = gsap.timeline();
+let nowreversing = false;
 
 async function byDecades(e) {
 
@@ -11,6 +12,7 @@ async function byDecades(e) {
     let years;
     let target;
     let lpTarget;
+
     if (selectedEra == 'eighty') {
         $('.targetDecade').text(`80'`)
         years = d3.range(1980, 1990, 1)
@@ -45,16 +47,13 @@ async function byDecades(e) {
         lpTarget = 'lp10s'
     }
 
+    $('.playingobj').text(`Lyrics of ${target}`)
+
     let data = await recallData(target);
     let hundred = await getTopHundred(data);
     rollDisc(lpTarget, selectedEra, dataTorender)
-    showplayer()
 }
 
-function showplayer() {
-    $('.player').css('opacity', 1)
-    $('.vinyl').css('opacity', 0)
-}
 
 function recallData(decades) {
 
@@ -77,6 +76,7 @@ function getTopHundred(selected) {
 }
 
 function rollDisc(lpTarget, selectedEra, dataTorender) {
+    $('.buttoncontainer').css('pointer-events', 'none')
     $('.notableArtists').remove()
     d3.selectAll('.lp').transition().duration(500).style('opacity', 0)
     d3.selectAll('.pic').each(function(d) {
@@ -87,10 +87,12 @@ function rollDisc(lpTarget, selectedEra, dataTorender) {
             d3.select(this).transition().duration(500).style('opacity', 0)
         }
     })
-    tl.to(`.${lpTarget}`, { x: '100%', rotation: -180, opacity: 1, duration: 2 });
+    tl.to(`.${lpTarget}`, { x: '100%', rotation: -180, opacity: 1, duration: 2 })
+        .to(`.${lpTarget}`, { x: '0%', rotation: 0, opacity: 0, duration: 2 })
     d3.selectAll('.pic').style('pointer-events', 'none')
     d3.selectAll('.eraDesc').style('pointer-events', 'none')
     $('body').css('overflow-y', 'hidden')
+
     transition(dataTorender)
     songImg(selectedEra)
 }
@@ -133,11 +135,16 @@ function transition(dataTorender) {
 
 function initialSetup() {
 
+
+
+    d3.select('.eqXaxis').remove()
+    d3.select('.eqYaxis').remove()
+    d3.select('.eqGraph').remove()
+    d3.select('.eqBackground').remove()
+
     width = parseInt($('.equalizergraph').css('width').split('px')[0])
     height = parseInt($('.equalizergraph').css('height').split('px')[0]);
     svg = d3.select('.equalizergraph')
-        // svg.attr('width', width);
-        // svg.attr('height', height);
 
 
     marginbase = d3.min([width, height])
@@ -180,29 +187,76 @@ function initialSetup() {
 
     setTimeout(() => {
         $('.equalizer').css('opacity', 1)
+        $('.equalizergraph').css('opacity', 1)
+        $('.equalizerheader').css('opacity', 1)
+
     }, 4500)
 
     setTimeout(() => {
 
         playTl.to('.equalizer', {
             opacity: 1,
-            onComplete: updateAxis.bind(this, 1)
-        }).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 2) }
+            onComplete: updateAxis.bind(this, 1),
+            onReverseComplete: updateAxis.bind(this, 1)
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 3) }
+        }).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 2),
+                onReverseComplete: updateAxis.bind(this, 2)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 4) }
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 3),
+                onReverseComplete: updateAxis.bind(this, 3)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 5) }
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 4),
+                onReverseComplete: updateAxis.bind(this, 4)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 6) }
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 5),
+                onReverseComplete: updateAxis.bind(this, 5)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 7) }
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 6),
+                onReverseComplete: updateAxis.bind(this, 6)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 8) }
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 7),
+                onReverseComplete: updateAxis.bind(this, 7)
+            }
 
-        ).to('.equalizer', { duration: 2, opacity: 1, onComplete: updateAxis.bind(this, 9) })
+        ).to('.equalizer', {
+                duration: 2,
+                opacity: 1,
+                onComplete: updateAxis.bind(this, 8),
+                onReverseComplete: updateAxis.bind(this, 8)
+            }
+
+        ).to('.equalizer', {
+            duration: 2,
+            opacity: 1,
+            onComplete: updateAxis.bind(this, 9),
+            onReverseComplete: updateAxis.bind(this, 9)
+        })
         playTl.play()
+
+        addPlayerFunction(playTl)
     }, 6500)
 
 
@@ -402,6 +456,7 @@ function updateBars(sourceData) {
 }
 
 function addGlow() {
+    // svg.select('defs').remove()
     var defs = svg.append("defs");
 
     //Filter for the outside glow
@@ -473,5 +528,38 @@ function songImg(selectedEra) {
     for (let i = 1; i < 6; i++) {
         $('.artistImgs').append(`<img class = 'notableArtists' src ='./imgs/${selectedEra}${i}.jpg'>`)
     }
+
+}
+
+function addPlayerFunction(timeline) {
+    $('.playpausebutton').on('click', () => {
+        timeline.paused(!timeline.paused())
+        if (nowreversing) {
+            timeline.play();
+            nowreversing != nowreversing
+        }
+
+    })
+
+    $('.rewindbutton').on('click', () => {
+        timeline.reverse()
+        nowreversing = true;
+    })
+
+    $('.ejectbutton').on('click', () => {
+        $('.buttonheader').animate({ opacity: 1 }, 1000)
+        $('.buttoncontainer').animate({ opacity: 1 }, 1000)
+        $('.equalizer').css('opacity', 0)
+        $('.equalizergraph').css('opacity', 0)
+        $('body').css('overflow-y', 'scroll')
+        $('.equalizerheader').css('opacity', 0)
+        $('.buttoncontainer').css('pointer-events', 'auto')
+        $('.pic').css('pointer-events', 'auto')
+        $('.eraDesc').css('pointer-events', 'auto')
+        $('.pic').css('opacity', 1)
+        $('.playingobj').text('Waiting...')
+    })
+
+
 
 }

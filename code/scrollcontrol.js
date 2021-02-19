@@ -1,6 +1,7 @@
 import * as vocabPlot from './vocabPlot.js'
 import * as uniquewords from './uniqueword.js';
 import * as wordEqualizer from './wordEqualizer.js'
+import * as disc from './disc.js'
 
 export const scrollcontroll = () => {
     let newImgwidth = 150
@@ -92,7 +93,16 @@ export const scrollcontroll = () => {
             scrub: true,
             start: 'center center',
             end: `+=${pageSize*6}px top`,
-            pin: '.graphtitle'
+            pin: '.graphtitle',
+            onEnter: () => {
+                $('.backgroundIMG').css('visibility', 'visible')
+            },
+            onEnterBack: () => {
+                $('.backgroundIMG').css('visibility', 'visible')
+            },
+            onLeaveBack: () => {
+                $('.backgroundIMG').css('visibility', 'hidden')
+            }
         }
     })
 
@@ -168,24 +178,117 @@ export const scrollcontroll = () => {
             pin: '.decadeselection',
             onEnter: () => {
                 $('.decadeselection').animate({ opacity: 1 }, 1000)
+                $('.player').animate({ opacity: 1 }, 1000)
+                $('.vinyl').animate({ opacity: 0 }, 500)
             },
             onLeave: () => {
                 $('.decadeselection').animate({ opacity: 0 }, 1000)
+                $('.player').animate({ opacity: 0 }, 1000)
             },
             onEnterBack: () => {
                 $('.decadeselection').animate({ opacity: 1 }, 1000)
+                $('.player').animate({ opacity: 1 }, 1000)
             },
             onLeaveBack: () => {
                 $('.decadeselection').animate({ opacity: 0 }, 1000)
+                $('.player').animate({ opacity: 0 }, 1000)
+                $('.vinyl').animate({ opacity: 1 }, 500)
             },
         }
     })
+
+
+
+
 
     tl1.to('.equalizer', {
         scrollTrigger: {
             trigger: '.decadeselection',
             start: 'center center+=120',
             pin: '.equalizer',
+        }
+    })
+
+
+
+    tl1.to('.lastsummary', {
+        scrollTrigger: {
+            trigger: '.lastsummary',
+            start: `top top`,
+            pin: '.lastsummary',
+            markers: true,
+            onEnter: () => {
+
+                $('.player').css({
+                    'bottom': '10%',
+                    'grid-template-columns': 'auto',
+                    'grid-auto-flow': 'column'
+                })
+                $('.controllbuttons').css({
+                    'display': 'grid',
+                    'grid-auto-flow': 'row'
+                })
+
+
+                $('.lastsummary').animate({ opacity: 1 }, 1000)
+                disc.removePlayer();
+                disc.addButtons();
+                disc.addEvent();
+                $('.player').css('opacity', 1)
+
+                disc.loadNdraw(currentSelect)
+                $('.wordDistribution').addClass('switchselected')
+                $('.year80s').addClass('yearbtnselected')
+            },
+            onLeaveBack: () => {
+                $('.lastsummary').animate({ opacity: 0 }, 1000)
+                $('.player').css('opacity', 0),
+                    disc.recoverPlayer();
+
+
+                $('.player').css({
+                    'bottom': '5%',
+                    'grid-template-columns': '5fr 1fr 1fr 1fr',
+                    'grid-auto-flow': 'column'
+                })
+                $('.controllbuttons').css({
+                    'width': '100%',
+                    'display': 'flex',
+                    'justify-content': 'center',
+                    'align-items': 'center',
+                    'flex-direction': 'column'
+                })
+
+
+
+            },
+            onLeave: () => {
+                // lastsummary 꺼지고 , player꺼진다
+                $('.lastsummary').css('opacity', 0)
+                $('.player').css('opacity', 0)
+            },
+            onEnterBack: () => {
+
+                disc.removePlayer();
+                disc.addButtons();
+                disc.addEvent();
+
+                $('.player').css({
+                    'bottom': '10%',
+                    'grid-template-columns': 'auto',
+                    'grid-auto-flow': 'column'
+                })
+                $('.controllbuttons').css({
+                    'display': 'grid',
+                    'grid-auto-flow': 'row'
+                })
+
+                $('.lastsummary').css('opacity', 1)
+                $('.player').css('opacity', 1)
+
+
+
+            }
         }
     })
 

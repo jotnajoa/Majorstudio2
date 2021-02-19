@@ -112,7 +112,7 @@ body {
 }
 
 .contents {
-    z-index: 1;
+    z-index: 0;
     min-width: 1000px;
     width: 70%;
     align-content: center;
@@ -120,27 +120,12 @@ body {
     position: relative;
 }
 
-.backgroundIMG {
-    position: fixed;
-    min-width: 1000px;
-    width: 100%;
-    opacity: 0.1;
-    filter: blur(1px);
-    top: 5%;
-    text-align: center;
-    z-index: 0;
-}
-
-.backgroundSource {
-    width: 700px;
-}
-
 .contents>.subTitle {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Sofia-pro;
     font-weight: 100;
     font-size: 0.5rem;
     color: #e6e6e6;
-    width: 30%;
+    width: 40%;
     min-width: 300px;
     margin: auto;
     position: relative;
@@ -213,12 +198,12 @@ hr {
 }
 
 .videodescription>h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
     font-size: 1rem
 }
 
 .actuallyrics {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: realist;
     background: rgba(93, 93, 93, 0.603);
     padding: none;
     padding-top: 30px;
@@ -244,19 +229,19 @@ hr {
     right: 0%;
     color: #e6e6e6;
     font-size: 0.6rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
     opacity: 0;
 }
 
 .highText {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
     color: #F74F4F;
     font-weight: 400;
     font-size: 0.6rem
 }
 
 .videodescription>.nonhighText {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
     font-weight: 100;
     font-size: 0.6rem;
 }
@@ -292,29 +277,28 @@ video {
     color: #ffffff;
     fill: #ffffff;
     font-size: 0.6em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro
 }
 
 .graphtitle {
-    color: #ffffffc5;
+    color: #F74F4F;
     font-size: 0.4em;
     font-style: oblique;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sofia-pro;
     position: absolute;
     left: 10%;
-    top: 75%;
+    top: 72%;
     opacity: 0;
 }
 
 .wordcount {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
     color: #F74F4F;
 }
 
 .wordCount,
 p {
     padding: 0;
-    margin: 10px;
 }
 
 .xAxis,
@@ -391,7 +375,7 @@ p {
 
 .equalizer>.equalizerheader {
     color: #ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: realist;
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
@@ -409,6 +393,27 @@ p {
 
 .equalizerheader>.headerdescription {
     width: 40%;
+    margin: auto;
+    justify-content: start;
+    font-size: 0.4rem;
+}
+
+.buttonheader>.headermsg {
+    font-family: sofia-pro;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-style: oblique
+}
+
+.buttonheader>.headerdescription {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40%;
+    top: 12%;
     margin: auto;
     justify-content: start;
     font-size: 0.4rem;
@@ -451,6 +456,8 @@ p {
 }
 
 .button {
+    position: relative;
+    top: 10%;
     width: 200px;
     height: 320px;
     font-size: 0.8rem;
@@ -492,18 +499,16 @@ p {
 }
 
 .msg {
-    display: grid;
-    align-items: center;
-    font-family: realist;
     position: absolute;
     width: 300px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffffff;
-    font-size: 0.45rem;
-    right: 1%;
-    box-shadow: 2px 2px 4px #ffffff;
-    height: 150px;
-    background-color: #414141;
+    font-family: Sofia-pro;
+    color: #e6e6e6;
+    border: solid 3px #4FF75C;
+    font-size: 0.5rem;
+    right: 0%;
+    /* background-color: #5a5a5a; */
+    /* box-shadow: 2px 0px 3px #EAF74F; */
+    height: 100px;
 }
 
 .msg p {
@@ -513,7 +518,7 @@ p {
 }
 
 .methodology {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Sofia-pro;
     color: #e6e6e6;
     font-size: 0.4rem;
     opacity: 0;
@@ -523,7 +528,8 @@ p {
 }
 
 .methodTitle {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    font-family: Sofia-pro;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -536,7 +542,7 @@ p {
     grid-template-columns: repeat(6, 1fr);
     gap: 5px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     justify-content: space-between;
 }
 
@@ -549,7 +555,7 @@ p {
 
 .unique {
     opacity: 1;
-    color: rgb(251, 255, 0);
+    color: rgba(251, 255, 0, 0.753);
     animation: litup 6s
 }
 
@@ -572,15 +578,14 @@ p {
     text-align: center;
 }
 
-.uniqueexample {
+
+/* .uniqueexample {
     color: #e6e6e6;
     position: absolute;
     text-align: start;
     font-style: italic;
     width: 200px
-}
-
-.noclick {}
+} */
 
 .equalizerheader {
     position: relative;
@@ -607,7 +612,7 @@ p {
 
 .player {
     position: fixed;
-    bottom: 2%;
+    bottom: 5%;
     color: #ffffff;
     width: 70%;
     min-width: 1000px;
@@ -622,8 +627,28 @@ p {
     opacity: 0
 }
 
+
+/* .player {
+    position: fixed;
+    left: 0%;
+    bottom: 10%;
+    color: #ffffff;
+    width: 70%;
+    min-width: 1000px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    font-size: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: realist, sans-serif;
+    opacity: 1
+} */
+
 .icon {
-    fill: #F74F4F
+    fill: #F74F4F;
+    cursor: pointer;
 }
 
 .controllbuttons {
@@ -633,6 +658,16 @@ p {
     align-items: center;
     flex-direction: column;
 }
+
+
+/* controlbutton layout should change? */
+
+
+/* .controllbuttonsrev {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+} */
 
 .status {
     width: 100%;
@@ -680,4 +715,177 @@ p {
     50% {
         opacity: 0.3;
     }
+}
+
+#myCanvas {
+    position: absolute;
+    top: 0px;
+    font-family: realist, sans-serif;
+}
+
+#mySvg {
+    position: absolute;
+    top: 10%;
+    font-family: realist, sans-serif;
+    display: none;
+}
+
+.yearbtn {
+    border: solid #226527 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #133a16;
+    filter: blur(1px);
+    margin: auto;
+    margin-top: 10%;
+}
+
+.switch {
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background-color: #4a4b4a81;
+    filter: blur(1px);
+    margin: auto;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+
+.yearbtnselected {
+    background-color: #41c94c;
+    filter: blur(2px)
+}
+
+.switchselected {
+    background-color: #F74F4F;
+    filter: blur(2px)
+}
+
+.canvasDesc {
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    right: 0%;
+    top: 10%;
+}
+
+.canvasDesc {
+    color: #EBEBEB;
+    font-family: realist;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.canvasDescTitle {
+    margin-top: 15%;
+    font-weight: 200;
+}
+
+.canvasDescSub {
+    margin-top: 10%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.disLegend {
+    width: 100%;
+}
+
+.top10 {
+    color: #EBEBEB;
+    position: absolute;
+    font-family: realist;
+    font-weight: 100;
+    font-size: 15px;
+    width: 30%;
+    height: 60%;
+    right: 0%;
+    top: 55%;
+}
+
+.top10Desc {
+    width: 100%;
+}
+
+.top10wordsbox {
+    font-family: alarmNormal;
+    color: #4FF75C;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: column;
+}
+
+.tenwords {
+    opacity: 0.4;
+    height: 15px;
+    width: 80%;
+    cursor: pointer;
+}
+
+.tenwordsSelected {
+    border-bottom: solid 1px yellow;
+    opacity: 1;
+}
+
+.coverXaxis,
+.coverYaxis {
+    stroke: #EBEBEB;
+    stroke-width: 0.5px;
+}
+
+.coverYaxis>.domain,
+.coverXaxis>.domain {
+    stroke: #EBEBEB;
+    stroke-width: 0.3px;
+}
+
+.tick>text {
+    color: #EBEBEB
+}
+
+line {
+    stroke: #EBEBEB;
+}
+
+.coverline {
+    stroke: #4FF75C;
+    stroke-width: 0.5px;
+}
+
+.Ygrid,
+.Xgrid {
+    stroke-width: 0.2px;
+    stroke-dasharray: 1px;
+}
+
+.WordChosen {
+    fill: #F74F4F;
+    font-size: 12px;
+}
+
+.WordCovered {
+    fill: #F74F4F;
+    font-size: 12px;
+}
+
+.lastsummary {
+    position: absolute;
+    width: 1000px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+}
+
+.backgroundIMG {
+    position: fixed;
+    opacity: 0.2;
+    filter: blur(3px);
+    z-index: 0;
+    visibility: hidden;
 }
