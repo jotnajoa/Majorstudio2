@@ -69,7 +69,7 @@ This distribution shows how repetitive songs used to be and how they have change
 <div class='section midsize'>
 Methodology
 <hr>
-<img src='4.png'>
+<img src='5.png'>
 
 <p class='smallsize subdescription'>
 Shows a short animation to show the methodology of this project because the methodology of 'unique word set' could be misleading. So to make it clear, shows a short animation for the idea
@@ -77,51 +77,35 @@ Shows a short animation to show the methodology of this project because the meth
 </div>
 
 <div class='section midsize'>
-Exploring by decades
-<hr>
-<img src='6.png'>
-
-<p class='smallsize subdescription'>
-To explore the lyrics changes over time, make albums to represent each decade with the notable artists during the time.
-And the animation is going to be LP-Player like interface.
-</p>
-</div>
-
-<div class='section midsize'>
-Top 100 words during the era
-<hr>
-<img src='8.png'>
-
-<p class='smallsize subdescription'>
-Following the overall theme which is music player, the frequency of each word is visualized via the height of the equalizer bars of the analogue style music player.
-The buttons below actually controlls the flow of the visualization.
-</p>
-</div>
-
-<div class='section midsize'>
-Last Visual Summary-1
+Word explorer
 <hr>
 <img src='9.png'>
 
 <p class='smallsize subdescription'>
-Shows the overall distribution each era across all the songs.
-The First visualization shows how widely and diversely words are distributed and how certain words are more frequently adopted compared to the other words. 
-Thie animation can be switched to the other visualization which shows the word coverage by decade.
+Choose the artis from the options by artists' intial letter to deep dive into the 
+lyrics usage of each artist
 </p>
 </div>
 
 <div class='section midsize'>
-Last Visual Summary-2
+word coverage-1
 <hr>
 <img src='10.png'>
 
 <p class='smallsize subdescription'>
-This page is dedicated to the summary of the word coverage.
-By clicking different decades, audience can see how widely or less widely various vocabulary were adopted in each era.
+Analogue music player interface leads the audice to the new exploring phase where user could controll the nob to increase or decrease the word range to explore and the word covered by the control nob range will be lit up to show the word coverage by the setting.
 </p>
 </div>
 
+<div class='section midsize'>
+word coverage-2
+<hr>
+<img src='11.png'>
 
+<p class='smallsize subdescription'>
+The amount of the words lit up shows roughly how much portion was covered so far by controlling the nob
+</p>
+</div>
 <style>
     .bigsize{
         font-size:24px;
