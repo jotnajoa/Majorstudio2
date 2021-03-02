@@ -1,47 +1,4 @@
-<style>
-    .bigsize{
-        font-size:24px;
-        font-weight:300;
-    }
-.midsize{
-    margin-top:25px;
-    font-size:18px;
-    font-weight:400;
-}
-.smallsize{
-    font-size:12px;
-    font-weight:200;
-}
-li{
-    font-size:12px;
-}
-ul{
 
-    list-style: square inside;
-}
-.intro{
-    border:solid 1px grey;
-    box-shadow:1px 1px 1px;
-    padding:20px;
-}
-.prototype{
-    position:relative;
-    margin:auto;
-    margin-top:50px;
-    text-align:center;
-}
-.section{
-
-}
-.subdescription{
-    text-align:left;
-}
-hr{
-    margin:0;
-    padding:0;
-}
-
-    </style>
 
 
 <h1 style='text-decoration:underline;font-weight:300'>Hip hop Vocabulary Project<h1>
@@ -149,3 +106,47 @@ word coverage-2
 The amount of the words lit up shows roughly how much portion was covered so far by controlling the nob
 </p>
 </div>
+<style>
+    .bigsize{
+        font-size:24px;
+        font-weight:300;
+    }
+.midsize{
+    margin-top:25px;
+    font-size:18px;
+    font-weight:400;
+}
+.smallsize{
+    font-size:12px;
+    font-weight:200;
+}
+li{
+    font-size:12px;
+}
+ul{
+
+    list-style: square inside;
+}
+.intro{
+    border:solid 1px grey;
+    box-shadow:1px 1px 1px;
+    padding:20px;
+}
+.prototype{
+    position:relative;
+    margin:auto;
+    margin-top:50px;
+    text-align:center;
+}
+.section{
+
+}
+.subdescription{
+    text-align:left;
+}
+hr{
+    margin:0;
+    padding:0;
+}
+
+    </style>
