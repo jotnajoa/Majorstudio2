@@ -112,7 +112,7 @@ lyrics usage of each artist
 </p>
 </div>
 
-<div class='section'style='margin-top:25px;
+<div style='margin-top:25px;
     font-size:18px;
     font-weight:400;'>
 word coverage-1
@@ -125,7 +125,7 @@ Analogue music player interface leads the audice to the new exploring phase wher
 </p>
 </div>
 
-<div class='section' style='margin-top:25px;
+<div style='margin-top:25px;
     font-size:18px;
     font-weight:400;'>
 word coverage-2
