@@ -263,10 +263,10 @@ function animate() {
     })
 
     highlightes.forEach((d) => {
-        d.update();
-        d.drawoutline()
-    })
-    count = count + 0.05
+            d.update();
+            d.drawoutline()
+        })
+        // count = count + 0.05
 
     // context.lineWidth = 2;
     // context.strokeStyle = "blue";

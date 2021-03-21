@@ -1,0 +1,38 @@
+<fulfillmentToken fulfillmentType="loan" auth="user" xmlns="http://ns.adobe.com/adept">
+  <distributor>urn:uuid:9cb786e8-586a-4950-8901-fff8d2ee6025</distributor>
+  <operatorURL>http://acs.ebookcentral.proquest.com/fulfillment</operatorURL>
+  <transaction>820087_301275401</transaction>
+  <expiration>2021-04-02T22:45:08-07:00</expiration>
+  <resourceItemInfo>
+    <resource>urn:uuid:e0000000-0000-0000-0000-000000820087</resource>
+    <resourceItem>0</resourceItem>
+    <metadata>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Popular Music</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brabazon, Tara; </dc:creator>
+      <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">SAGE Publications</dc:publisher>
+      <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">820087</dc:identifier>
+      <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">application/epub+zip</dc:format>
+      <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">en</dc:language>
+    </metadata>
+    <licenseToken>
+      <resource>urn:uuid:e0000000-0000-0000-0000-000000820087</resource>
+      <permissions>
+        <display>
+          <duration>604799</duration>
+        </display>
+        <excerpt>
+          <duration>604799</duration>
+          <count initial="57" max="57" incrementInterval="10610"/>
+        </excerpt>
+        <print>
+          <duration>604799</duration>
+          <count initial="57" max="57" incrementInterval="10610"/>
+        </print>
+        <play>
+          <duration>604799</duration>
+        </play>
+      </permissions>
+    </licenseToken>
+  </resourceItemInfo>
+  <hmac>AfO6wQGqOMHpSzUWeeNfOFWjm74=</hmac>
+</fulfillmentToken>
