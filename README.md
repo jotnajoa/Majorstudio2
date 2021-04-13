@@ -4,7 +4,7 @@
   
 <img src='./preview.png'>
 
-**Abstract**
+**Abstract**<br>
 This project specifically focuses on two linguistic characteristics in songs. The first is how unique words are used in each song. This shows how diversely words are adapted to convey meaning. More unique words used in a song create more diversity and more complexity. The approach to measure the level of diversity in vocabulary is achieved by counting the unique instances of words: for example, if a certain word appears more than twice in a song, only the first instance is counted,  leaving the duplicates out of the word pool. 
 
     The second is how broad the listeners’ vocabulary would have to be. This focuses on how various subjects such as gender fluidity and homosexuality, are dealt with in songs as well as how different topics are interpreted in each song.  Today, these new topics require new vocabulary because in the past, they did not exist in the general public sphere. In addition to the quantitative analysis of absolute word count that will be presented in this paper, proportion analysis will  also be included : how much percentile is covered by having certain coverage or word. For example, by covering the top 10% of used vocabulary, we can estimate how much percentage of vocabulary is covered in a certain decade. 
