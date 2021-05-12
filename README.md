@@ -1,17 +1,12 @@
 <h1> Word up</h1>
-<h2>How many words do you need for hip hop songs?
-  <br>Quantitative Analysis on Hip Hop Lyrics</h2>
+<h2> Quantitative analysis on hip hop lyrics </h2>
   
 <img src='./preview.png'>
 
 **Abstract**<br>
-This project specifically focuses on two linguistic characteristics in songs. The first is how unique words are used in each song. This shows how diversely words are adapted to convey meaning. More unique words used in a song create more diversity and more complexity. The approach to measure the level of diversity in vocabulary is achieved by counting the unique instances of words: for example, if a certain word appears more than twice in a song, only the first instance is counted,  leaving the duplicates out of the word pool. 
+How many words does a foreign language speaker need to know to understand hip hop songs which use the comparably larger amount of words? This project began with this curiosity. This curiosity was challenged by the fact that knowing the meaning of words does not guarantee a listener could understand the context. This led me to a new research direction which is quantitative analysis on vocabulary of hip hop.
+This study looks into two aspects of vocabulary used for rap. The first one is an analysis in each song. It infers that social factors came into play changing the vocabulary pattern in songs, for example ‘transition to a society which is more open to subjective perspective toward problems or issues’. This project verifies the assumption by seeing the quantitative analysis on rap.The second part of the research is about diversity of words across songs. This broader landscape proves the trend that hip hop culture has been leaning from its beginning (1980’s) to today. It tries to answer the question related to how vocabulary of songs has become similar to one another. 
 
-The second is how broad the listeners’ vocabulary would have to be. This focuses on how various subjects such as gender fluidity and homosexuality, are dealt with in songs as well as how different topics are interpreted in each song.  Today, these new topics require new vocabulary because in the past, they did not exist in the general public sphere. In addition to the quantitative analysis of absolute word count that will be presented in this paper, proportion analysis will  also be included : how much percentile is covered by having certain coverage or word. For example, by covering the top 10% of used vocabulary, we can estimate how much percentage of vocabulary is covered in a certain decade. 
-
-To analyze trends over time, this project covers hip hop songs from the first advent of it (1980) to the songs of today(up to 2020). The user is able to compare the changes by navigating dispersion patterns visually by decade and also to see what is the general pattern of vocabulary by seeing the generative art form of word dispersion. 
-
-Since this project shows an aspect of pop culture linguistically, the vinyl player interface is adopted as a visual inspiration. The user can explore the processed information as if one plays with an analog music player.
 
 
 
